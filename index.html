@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador de Dias de Namoro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      margin-top: 20%;
+    }
+    h1 {
+      color: #ff6363;
+    }
+    .days {
+      font-size: 2rem;
+      margin-top: 20px;
+      color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Isac ❤️ Júlia</h1>
+    <p>Vocês estão namorando há:</p>
+    <div class="days" id="daysCounter"></div>
+  </div>
+
+  <script>
+    // Data de início do namoro
+    const startDate = new Date("2022-09-23");
+    const today = new Date("2024-12-10"); // Data fixa (hoje)
+
+    // Calcula a diferença em milissegundos
+    const diffTime = today - startDate;
+
+    // Converte para dias
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+    // Exibe no site
+    document.getElementById("daysCounter").textContent = `${diffDays} dias`;
+  </script>
+</body>
+</html>
